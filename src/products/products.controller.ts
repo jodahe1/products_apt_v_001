@@ -10,7 +10,7 @@ export class ProductsController {
     @Get()
     async findall():Promise<Product[]>
     {
-        return this.findall()
+        return this.productService.findall()
     }
     @Get(':id')
     async findone(@Param('id') id:string):Promise<Product| null > {
